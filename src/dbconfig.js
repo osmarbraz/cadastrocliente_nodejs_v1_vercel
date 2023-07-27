@@ -4,8 +4,6 @@
 
 // Import bibliotecas
 const { sql } = require ('@vercel/postgres');
-//const { createPool } = require ('@vercel/postgres');
-
 
 const dotenv = require('dotenv');
 dotenv.config();
@@ -15,21 +13,10 @@ dotenv.config();
  * @returns 
  */
 async function createDbConnection() {
-  
-  //const client = await db.connect();
-
-  // const pool = new Pool({
-  //   connectionString: process.env.POSTGRES_URL + "?sslmode=require",
-  // })
-  
-  // const db = createPool({
-  //     connectionString: process.env.POSTGRES_URL + "?sslmode=require",
-  // });
-
-
+    
   console.log("Conexão com PostgreSQL foi estabelecida");
 
-  //createTable(sql);  
+  createTable(sql);  
 
   return sql;
 }
@@ -52,5 +39,4 @@ function createTable(db) {
     }
   }
 
-//module.exports = createDbConnection();
 module.exports = createDbConnection();

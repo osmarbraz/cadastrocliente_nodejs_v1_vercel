@@ -11,10 +11,14 @@
 - Dependências:    
     - express,
     - cors,
+    - dotenv
     - @vercel/postgres.
 
 - Execução:    
    <pre><code>npm start</code></pre>
+
+- Vercel   
+    https://cadastrocliente-nodejs-v1-vercel.vercel.app/
 
 - Arquivos em src:
     - index.js - Programa principal com o servidor Express.

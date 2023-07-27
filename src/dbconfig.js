@@ -26,9 +26,9 @@ async function createDbConnection() {
  * 
  * @param {*} db 
  */
-function createTable(db) {
+async function createTable(db) {
      try {
-      db`create table CLIENTE (
+      await db`create table CLIENTE (
             clienteId integer, 
             nome varchar(100), 
             cpf varchar(11), 

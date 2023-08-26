@@ -32,9 +32,9 @@ router.get('/', (req, res)=>{
 /**
  * Serviço que retorna a lista de cliente.
  *
- * curl http://localhost:8000/cliente
+ * curl http://localhost:8000/clientes
  */
-router.get('/cliente', getLista);
+router.get('/clientes', getLista);
 
 /**
  * Serviço que retorna um cliente.

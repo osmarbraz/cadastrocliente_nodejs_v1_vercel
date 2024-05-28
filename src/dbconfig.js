@@ -28,11 +28,11 @@ async function createDbConnection() {
  */
 async function createTable(db) {
      try {
-      await db`create table CLIENTE (
-            clienteId integer, 
-            nome varchar(100), 
-            cpf varchar(11), 
-            CONSTRAINT PK_CLIENTE PRIMARY KEY (clienteId));`;
+      await db`CREATE TABLE cliente (
+            clienteId INTEGER, 
+            nome VARCHAR(100), 
+            cpf VARCHAR(11), 
+            CONSTRAINT pk_cliente PRIMARY KEY (clienteId));`;
       console.log("Tabela cliente criada");
     } catch (error) {
       console.log("Tabela já existe");

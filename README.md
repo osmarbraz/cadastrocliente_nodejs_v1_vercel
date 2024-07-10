@@ -18,7 +18,11 @@
 ## Execução
    <pre><code>npm start</code></pre>
 
-## Arquivos em src
+## Atualização
+   Caso o diretório "node_modules" tenha sido apagado basta executar o comando npm a seguir para recriar a pasta e os arquivos das dependências.
+   <pre><code>npm update</code></pre>      
+
+## Arquivos fontes do projeto em src
 - index.js - Programa principal com o servidor Express.
 - clienterecurso.js - Contêm os métodos de acesso aos recursos do banco de dados.
 - dbconfig.js - Contêm as configurações e conexão com o banco de dados.
@@ -28,6 +32,8 @@
     https://cadastrocliente-nodejs-v1-vercel.vercel.app/ 
 
 ## Serviços
+    Substitua localhost:8080 pelo endereço do servidor.
+
 - Serviço que retorna via GET a lista de cliente.<br>
     http://localhost:8000/clientes
 

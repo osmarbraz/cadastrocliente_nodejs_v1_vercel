@@ -12,8 +12,8 @@
 
 ## Dependências
 
-- express,
 - cors,
+- express,
 - dotenv
 - @vercel/postgres.
 

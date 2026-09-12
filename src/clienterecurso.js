@@ -3,9 +3,7 @@
  */
 
 // Import das bibliotecas próprias
-const db = require("./dbconfig");
-
-const { sql } = require ('@vercel/postgres');
+const sql = require("./dbconfig");
 
 // Retorna uma lista com todos os clientes
 const getLista = async (request, response) => {   

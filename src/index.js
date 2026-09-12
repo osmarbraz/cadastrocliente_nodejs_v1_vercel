@@ -22,6 +22,9 @@ const rotas = require("./servicos");
 app.use(rotas);
 
 // Inicia o servidor
-app.listen(port, () => {
-  console.log(`Servidor ouvindo porta ${port}`);
-});
+//app.listen(port, () => {
+//  console.log(`Servidor ouvindo porta ${port}`);
+//});
+
+// Exporta a aplicação para a Vercel
+module.exports = app;

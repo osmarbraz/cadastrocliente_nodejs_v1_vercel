@@ -2,13 +2,19 @@
  * Configurações e conexão com o banco de dados.
  */
 
-//Carrega as propriedades
+// Importa a biblioteca dotenv, responsável por carregar
+// as variáveis de ambiente armazenadas no arquivo .env
 const dotenv = require('dotenv');
+
+// Carrega as variáveis do arquivo .env para o objeto process.env
 dotenv.config();
 
-// Import bibliotecas
-const { neon } = require ('@neondatabase/serverless');
+// Essa função permite estabelecer a conexão com um banco
+// de dados PostgreSQL hospedado no Neon.
+const { neon } = require('@neondatabase/serverless');
 
+// Cria a conexão com o banco de dados utilizando a string
+// de conexão armazenada na variável de ambiente DATABASE_URL.
 const sql = neon(process.env.DATABASE_URL);
 
 /**

@@ -1,30 +1,17 @@
-/**
- * Aplicação principal do CRUD de cliente.
- */
+const { Pool } = require('pg');
 
-// Import das bibliotecas
-const express = require('express');
-const cors = require('cors');
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: { rejectUnauthorized: false }
+});
 
-// Inicializa o servidor
-const app = express();
-// Define a porta do servidor
-const port = 8000;
-
-// Middleware para analisar o corpo da solicitação
-app.use(express.urlencoded({ extended: true }))
-app.use(express.json());
-app.use(cors());
-    
-// Rota dos serviços do CRUD para o modelo Cliente
-const rotas = require("./servicos");
-// Carrega os serviços
-app.use(rotas);
-
-// Inicia o servidor
-//app.listen(port, () => {
-//  console.log(`Servidor ouvindo porta ${port}`);
-//});
-
-// Exporta a aplicação para a Vercel
-module.exports = app;
+module.exports = async (req, res) => {
+  try {
+    const client = await pool.connect();
+    const result = await client.query('SELECT NOW()');
+    client.release();
+    res.status(200).json({ time: result.rows[0] });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};

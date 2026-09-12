@@ -2,6 +2,10 @@
  * Configurações e conexão com o banco de dados.
  */
 
+//Carrega as propriedades
+const dotenv = require('dotenv');
+dotenv.config();
+
 // Import bibliotecas
 const { neon } = require ('@neondatabase/serverless');
 

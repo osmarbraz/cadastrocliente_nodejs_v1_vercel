@@ -13,16 +13,16 @@ dotenv.config();
 // de dados PostgreSQL hospedado no Neon.
 const { neon } = require('@neondatabase/serverless');
 
-// Cria a conexão com o banco de dados utilizando a string
-// de conexão armazenada na variável de ambiente DATABASE_URL.
-const sql = neon(process.env.DATABASE_URL);
-
 /**
  * Cria uma conexão com o banco de dados.
  * @returns 
  */
 async function createDbConnection() {
-    
+
+  // Cria a conexão com o banco de dados utilizando a string
+  // de conexão armazenada na variável de ambiente DATABASE_URL.
+  const sql = neon(process.env.DATABASE_URL);
+
   console.log("Conexão com PostgreSQL foi estabelecida");
 
   createTable(sql);  
@@ -44,11 +44,10 @@ async function createTable(db) {
             CONSTRAINT pk_cliente PRIMARY KEY (clienteId));`;
       console.log("Tabela cliente criada");
     } catch (error) {
-      console.log("Tabela já existe");
+      console.log("Tabela cliente já existe");
     }
   }
 
 // Inicializa a conexão e criação da tabela
-createDbConnection();  
 
 module.exports = sql;

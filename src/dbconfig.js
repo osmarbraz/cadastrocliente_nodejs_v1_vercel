@@ -2,15 +2,15 @@
  * Configurações e conexão com o banco de dados.
  */
 
+// Importa a biblioteca dotenv, responsável por carregar
+// as variáveis de ambiente armazenadas no arquivo .env
+const dotenv = require('dotenv');
+
 /**
  * Cria uma conexão com o banco de dados.
  * @returns 
  */
 function createDbConnection() {
-
-  // Importa a biblioteca dotenv, responsável por carregar
-  // as variáveis de ambiente armazenadas no arquivo .env
-  const dotenv = require('dotenv');
 
   // Carrega as variáveis do arquivo .env para o objeto process.env
   dotenv.config();

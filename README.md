@@ -45,8 +45,8 @@
     `http://localhost:8000/clientes`
 
 - Serviço que retorna via GET um cliente.<br>
-    substitua `<ID\>` por um id de um cliente.<br>
-    `http://localhost:8000/cliente/<ID\>`
+    substitua `<ID>` por um id de um cliente.<br>
+    `http://localhost:8000/cliente/<ID>`
 
 - Serviço que insere via POST um cliente.<br>
     `http://localhost:8000/cliente`<br>
@@ -59,5 +59,5 @@
     Content-Type: application/json -d {"clienteId":"1", "nome":"Pedro","cpf":"45678912399"}
     
 - Serviço que exclui via DELETE um cliente.<br>
-    Substitua `<ID\>` por um id de um cliente.<br>
-    `http://localhost:8000/cliente/<ID\>`
+    Substitua `<ID>` por um id de um cliente.<br>
+    `http://localhost:8000/cliente/<ID>`

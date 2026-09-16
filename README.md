@@ -51,12 +51,12 @@
 - Serviço que insere via POST um cliente.<br>
     `http://localhost:8000/cliente`<br>
     Enviar um JSON com os campos clienteId, nome e cpf.
-    Content-Type: application/json -d {"clienteId":"1", "nome":"Pedro","cpf":"45678912399"}
+    `Content-Type: application/json -d {"clienteId":"1", "nome":"Pedro","cpf":"45678912399"}`
 
 - Serviço que atualiza via PUT um cliente.<br>
     `http://localhost:8000/cliente`<br>
     Enviar um JSON com os campos clienteId, nome e cpf.
-    Content-Type: application/json -d {"clienteId":"1", "nome":"Pedro","cpf":"45678912399"}
+    `Content-Type: application/json -d {"clienteId":"1", "nome":"Pedro","cpf":"45678912399"}`
     
 - Serviço que exclui via DELETE um cliente.<br>
     Substitua `<ID>` por um id de um cliente.<br>
